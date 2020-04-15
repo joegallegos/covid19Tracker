@@ -19,21 +19,18 @@ const HomePage = () => {
   };
   return (
     <div className={styles.root}>
-      <>
-        <div className={styles.sidebar}>
-          {data.map((item) => (
-            <div key={item.state}>
-              <Card className={styles.card} elevation={Elevation.FOUR}>
-                <h1 className={styles.cardHeader}>{item.state}</h1>
-                <p>Total Positive: {item.positive}</p>
-                <p>Total Death: {item.death}</p>
-                <p>Total Tests: {item.totalTestResults}</p>
-                <p>Updated: {item.lastUpdateEt}</p>
-              </Card>
-            </div>
-          ))}
-        </div>
-      </>
+      <div className={styles.container}>
+        {data.map((item) => (
+          <div key={item.state}>
+            <Card className={styles.card} elevation={Elevation.FOUR}>
+              <h1 className={styles.cardHeader}>{item.state}</h1>
+              <p>Total Positive: {item.positive}</p>
+              <p>Total Death: {item.death}</p>
+              <p>Total Tests: {item.totalTestResults}</p>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contactInfo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contactInfoIcon {
+  margin-right: 10px;
+}

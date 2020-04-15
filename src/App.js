@@ -8,7 +8,6 @@ import './App.scss';
 
 function App() {
   // const API_URL = 'https://api.covid19api.com/';
-  const API_URL = 'https://coronavirus-19-api.herokuapp.com/countries/usa';
 
   return (
     <Router>

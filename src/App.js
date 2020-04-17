@@ -8,8 +8,6 @@ import ContactPage from './components/Contact';
 import './App.scss';
 
 function App() {
-  // const API_URL = 'https://api.covid19api.com/';
-
   return (
     <Router>
       <div className="App">

@@ -5,24 +5,18 @@
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-  column-gap: 10px;
-  row-gap: 15px;
-  width: 90%;
-  margin: 10px, 10px;
+  width: 50%;
+  height: 400px;
 }
 
-.card {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
+.infoCard {
+  margin-top: 40px !important;
 }
 
-.cardHeader {
-  font-size: 30px;
-  text-decoration: underline;
-  margin-bottom: 10px;
+.headerText {
+  font-size: 40px;
+}
+
+.lineGraph {
+  margin-top: 100px;
 }

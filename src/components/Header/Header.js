@@ -24,6 +24,9 @@ const Header = () => {
             <Link className={styles.link} to="/">
               Home
             </Link>
+            <Link className={styles.link} to="/states">
+              States
+            </Link>
             <Link className={styles.link} to="/contact">
               Contact
             </Link>

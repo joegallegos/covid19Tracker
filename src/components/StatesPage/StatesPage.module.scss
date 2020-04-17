@@ -1,0 +1,28 @@
+.root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.cardHeader {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}

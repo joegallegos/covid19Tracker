@@ -1,35 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
+import Graph from '../Graph';
 import styles from './HomePage.module.scss';
 
-const API_URL = 'https://covidtracking.com/api/states';
-
 const HomePage = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const fetchItem = await fetch(API_URL);
-    const item = await fetchItem.json();
-
-    setData(item);
-  };
   return (
     <div className={styles.root}>
       <div className={styles.container}>
-        {data.map((item) => (
-          <div key={item.state}>
-            <Card className={styles.card} elevation={Elevation.FOUR}>
-              <h1 className={styles.cardHeader}>{item.state}</h1>
-              <p>Total Positive: {item.positive}</p>
-              <p>Total Death: {item.death}</p>
-              <p>Total Tests: {item.totalTestResults}</p>
-            </Card>
-          </div>
-        ))}
+        <Card className={styles.infoCard} elevation={Elevation.FOUR}>
+          <h1 className={styles.headerText}>About Coronavirus (COVID-19)</h1>
+          <span>
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html#Coronavirus-Disease-2019-Basics">
+              Source
+            </a>
+          </span>
+          <br />
+          <br />
+          <p>
+            A novel coronavirus is a new coronavirus that has not been
+            previously identified. The virus causing coronavirus disease 2019
+            (COVID-19), is not the same as the coronaviruses that commonly
+            circulate among humans and cause mild illness, like the common cold.
+          </p>
+          <br />
+          <p>
+            A diagnosis with coronavirus 229E, NL63, OC43, or HKU1 is not the
+            same as a COVID-19 diagnosis. Patients with COVID-19 will be
+            evaluated and cared for differently than patients with common
+            coronavirus diagnosis.
+          </p>
+        </Card>
+        <div className={styles.lineGraph}>
+          <Graph />
+        </div>
       </div>
     </div>
   );

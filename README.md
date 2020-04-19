@@ -6,4 +6,11 @@
 - API used is [Covidtracking.com](https://covidtracking.com/api/states)
 - It is nothing fancy and I have plans to add more to it, but this gets across the basic info.
 
+Can be seen live at [here](http://coronatrackapp.herokuapp.com/)
+
+## Todo
+
+- [ ] Make mobile friendly
+- [ ] Fix graph points to be more visable
+
 ![example](src/assets/example.png)

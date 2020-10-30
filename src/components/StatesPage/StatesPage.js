@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, Elevation } from '@blueprintjs/core';
 import styles from './StatesPage.module.scss';
 
-const API_URL = 'https://covidtracking.com/api/states';
+const API_URL = 'https://api.covidtracking.com/v1/states/current.json';
 
 const StatesPage = () => {
   const [data, setData] = useState([]);
@@ -27,6 +27,7 @@ const StatesPage = () => {
               <p>Total Positive: {item.positive}</p>
               <p>Total Death: {item.death}</p>
               <p>Total Tests: {item.totalTestResults}</p>
+              <p>Last Updated: {item.lastUpdateEt}</p>
             </Card>
           </div>
         ))}

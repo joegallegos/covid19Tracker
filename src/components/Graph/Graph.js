@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import styles from './Graph.module.scss';
 
-const API_URL = 'https://covidtracking.com/api/us/daily';
+const API_URL = 'https://api.covidtracking.com/v1/us/daily.json';
 
 const Graph = () => {
   const [chartData, setChartData] = useState({});
